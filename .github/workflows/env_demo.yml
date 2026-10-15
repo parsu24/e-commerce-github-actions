@@ -1,17 +1,15 @@
+
 name: Show Env variables
 
-on: 
- workflow_dispatch:
-env:  
-  NAME: prashant
+on:
+  workflow_dispatch:
 
 jobs:
-  show_env:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Show plain text env:
-        run: echo "my name is ${{env.NAME}}"
-        
+      - name: Print message
+        run: echo "Hello from GitHub Actions"
     
 
     
