@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build the code with docker
-        run: echo "code built"
+        uses: docker/setup-buildx-action@v4
   test:
     needs: build
     runs-on: ubuntu-latest
