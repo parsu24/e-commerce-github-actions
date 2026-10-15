@@ -2,7 +2,7 @@
 # start with naming your workflow
 name: Hello
 on: 
- push:
+ workflow_dispatch: 
 jobs:
   greet:
    runs-on: ubuntu-latest
