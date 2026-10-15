@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Show plan text env:
-        run: echo " my name is ${{env.NAME}}
+        run: echo "my name is ${{env.NAME}}"
         
     
 
