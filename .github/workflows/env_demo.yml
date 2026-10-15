@@ -3,6 +3,15 @@ name: Show Env variables
 
 on:
   workflow_dispatch:
+    inputs:
+      envirinment: 
+        description: select the environment you want
+        required: true
+        type: choice
+        options:
+          - dev
+          - stg
+          - prd
 
 env:
   NAME: prashant
