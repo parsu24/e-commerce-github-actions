@@ -10,6 +10,7 @@ jobs:
      - name: Say hello
        run: echo "Hello Dosto"
   repo-name:
+    needs: greet
     runs-on: ubuntu-latest
     steps:
       - name: Show the repository name
