@@ -1,1 +1,5 @@
-#E commerce App for GitHub action practice
+#E-commerce App for GitHub action practice
+
+Git hub action fundamentals:
+
+
