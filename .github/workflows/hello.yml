@@ -1,7 +1,13 @@
 #Goal : to say the hello and tell the title /name of the repository
 # start with naming your workflow
 name: Hello
+
+#when the workflow runs
 on: 
+ push:
+  paths-ignore:
+    - 'README.md'
+    
  workflow_dispatch: 
 jobs:
   greet:
