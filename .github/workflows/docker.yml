@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-push: 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Code checkout
         uses: actions/checkout@v7
@@ -20,7 +20,7 @@ jobs:
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
 
