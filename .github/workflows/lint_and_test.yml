@@ -3,7 +3,8 @@
 name: Code Lint
 
 on: 
-    push:
+  workflow_call:
+  
 jobs:
     code-linter-and-test: 
          strategy:
