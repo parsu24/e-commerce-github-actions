@@ -9,6 +9,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: code checkout
-              uses: actions/checkpout@v7
+              uses: actions/checkout@v7
             - name: code lint check
               run: ruff check .
