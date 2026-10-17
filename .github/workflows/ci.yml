@@ -8,6 +8,7 @@ jobs:
       uses: ./.github/workflows/lint_and_test.yml
     
   build_and_push:
+      secrets: inherit
       needs: code-lint
       uses: ./.github/workflows/docker.yml
 
