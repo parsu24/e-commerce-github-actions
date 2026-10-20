@@ -1,0 +1,5 @@
+services:
+  app:
+    image: parsu24/e-commerce-python:latest
+    ports: 
+        - "80:80"
