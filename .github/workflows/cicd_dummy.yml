@@ -1,0 +1,39 @@
+#goal: build dummy ci/cd pipeline
+
+name: CICD Demo
+
+on:
+  workflow_dispatch:
+
+#  push:
+#   paths-ignore:
+#     - 'README.md'
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone the code
+        uses: actions/checkout@v4
+  build: 
+    needs: code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build the code with docker
+        uses: docker/setup-buildx-action@v4
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: test the application
+        run: echo "test passed"
+  deploy:
+    needs: [code,build,test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the app on server
+        run: echo "Application deployed"
+  
+
+
+
