@@ -1,5 +1,5 @@
 services:
   app:
-    image: parsu24/e-commerce-python:latest
+    image: parsu22/e-commerce-python:latest
     ports: 
         - "80:80"
