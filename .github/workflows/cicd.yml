@@ -1,7 +1,7 @@
 # Goal: To run the continous integration for the project
 name: CI
 on:
-  push:
+  workflow-dispatch:
 
 jobs:
   # Code
