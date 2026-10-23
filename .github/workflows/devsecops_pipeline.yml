@@ -16,6 +16,11 @@ jobs:
   code:
       needs: secret-scan
       uses: ./.github/workflows/lint_and_test.yml
+  # SAST
+  sast:
+     needs: code
+     uses: ./.github/workflows/sonar_scan.yml
+     secrets: inherit
 
   # #Build
   # build_and_push:
