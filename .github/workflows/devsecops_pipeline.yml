@@ -21,6 +21,17 @@ jobs:
      needs: code
      uses: ./.github/workflows/sonar_scan.yml
      secrets: inherit
+  
+  #Dependency scan
+
+  dependency-scan:
+      needs: sast
+      uses: ./.github/workflows/devsecops_pipeline.yml
+      
+
+
+
+
 
   # #Build
   # build_and_push:
