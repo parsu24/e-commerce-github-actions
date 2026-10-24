@@ -26,8 +26,8 @@ jobs:
 
   dependency-scan:
       needs: sast
-      uses: ./.github/workflows/devsecops_pipeline.yml
-      
+      uses: ./.github/workflows/dependency_scan.yml
+
 
 
 
